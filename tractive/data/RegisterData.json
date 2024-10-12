@@ -1,0 +1,41 @@
+[
+    {
+        "case": "Valid Register",
+        "fname": "user",
+        "lname": "test",
+        "email": "viennaUser@gmail.com",
+        "password": "password123"
+    },
+    {
+        "case": "Invalid Password",
+        "fname": "user",
+        "lname": "test",
+        "email": "usertest@gmail.com",
+        "password": "pass",
+        "error": "Minimum length is 8 characters."
+    },
+    {
+        "case": "Invalid Email",
+        "fname": "user",
+        "lname": "test",
+        "email": "user",
+        "password": "pass123456",
+        "error": "The email address is invalid."
+    },
+    {
+        "case": "Missing Required Fields",
+        "fname": " ",
+        "lname": " ",
+        "email": " ",
+        "password": "",
+        "error": " This field is required. "
+    },
+    {
+        "case": "Existing Email",
+        "fname": "user2",
+        "lname": "test2",
+        "email": "viennaUser@gmail.com",
+        "password": "password123",
+        "error": "User already Exists"
+    }
+]

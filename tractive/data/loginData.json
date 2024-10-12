@@ -1,0 +1,22 @@
+[
+    {
+        "case": "Wrong Password",
+        "email": "tokaashraf1993@gmail.com",
+        "password": "password123",
+        "error":"Looks like you entered a wrong email or password. Signed up with Google or Apple? Log in using one of the buttons."
+    },
+    {
+        "case": "Unregistered Email",
+        "email": "anotheruser@gmail.com",
+        "password": "password123",
+        "error":"Looks like you entered a wrong email or password. Signed up with Google or Apple? Log in using one of the buttons."
+
+    },
+    {
+        "case": "Invalid Data",
+        "email": "user@2",
+        "password": "passw",
+        "error":"Looks like you entered a wrong email or password. Signed up with Google or Apple? Log in using one of the buttons."
+
+    }
+]
