@@ -15,13 +15,13 @@ test.describe('Login Functionality  Tests', () => {
         await loginPage.enterloginData(Email, Password);
         await loginPage.clickOnLogin();
         await loginPage.validateLogin();
-        await settingsPage.validatePageTitle();
+        await settingsPage.validateSettingsPageTitle();
 
 
     });
 });
 
-test.describe('Data Driven Tests', () => {
+test.describe('Data Driven Invalid Login Tests', () => {
     const testData = loadTestData('loginData'); // Load the test data
 
     // Loop through the test data and run the test for each set of credentials

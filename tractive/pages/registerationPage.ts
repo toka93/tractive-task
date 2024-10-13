@@ -21,7 +21,6 @@ export class RegisterationPage extends BasePage {
 
   constructor(page: Page) {
     super(page);
-    //this.page = page;
     this.emailTextField = page.locator('input[name="email"]');
     this.passwordTextField = page.locator('input[type="password"]');
     this.firstnameTextField = page.locator('input[name="firstName"]');
@@ -77,7 +76,7 @@ export class RegisterationPage extends BasePage {
 
 
   async validateSingleRequiredFieldMessage(error: string) {
-    // Locate the first `//em` element
+    // Locate the first  element
     const requiredFieldElement = this.errorMessage;
 
     // Get the text content of the element

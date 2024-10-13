@@ -2,7 +2,7 @@ import { expect, Locator, Page } from '@playwright/test';
 import { BasePage } from './basePage';
 
 
-export class SettingsPage extends BasePage{
+export class ActivationPage extends BasePage{
   readonly pageTitle: Locator;
  
 
@@ -13,18 +13,18 @@ export class SettingsPage extends BasePage{
 
   constructor(page: Page) {
     super(page);
-    this.pageTitle  = page.locator('(//h1[@tcommon-title])[1]');
+    this.pageTitle  = page.locator('//*[@class="activation-header"]');
  
 
 
   }
 
-  async validateSettingsPageTitle(){
+  async validateActivationPageTitle(){
     await expect(this.pageTitle).toBeVisible();
-    const title = await this.page.getAttribute('(//h1[@tcommon-title])[1]', 'tcommon-title');
+    const title = await this.pageTitle.textContent();
 
     // Assert that the attribute value is what you expect
-    expect(title).toBe('Manage your Account');
+    expect(title).toBe('Enter Tracker ID');
   
 }
 }

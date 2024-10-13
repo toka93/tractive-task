@@ -22,7 +22,6 @@ export class LoginPage extends BasePage{
 
   constructor(page: Page, baseUrl: string) {
     super(page);
-    //this.page = page;
     this.baseUrl = baseUrl;
     this.emailTextField = page.locator('input[type="email"]');
     this.passwordTextField = page.locator('input[type="password"]');
@@ -63,10 +62,7 @@ export class LoginPage extends BasePage{
     
   }
   
-  async waitForPageToBeLoaded() {
-    await this.page.waitForLoadState('load');
-    await this.page.waitForLoadState('networkidle');
-  }
+
   async validateErrorMessage(error:string)
   {
   const errorMessage= await this.errorMessage.textContent();

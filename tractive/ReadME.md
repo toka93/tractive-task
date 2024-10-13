@@ -29,8 +29,8 @@ Password <br>
 - 3 specs(Login , Registeration and Localization).
 - Login Tests for valid and invalid cases.
 - Registeration Tests for valid and invalid cases.
-- Localization is a smoke sample script that checks for the titles in login and registeration pages for Dansk, Español 
-- Tests are extendable and can easily add multiple languages and more fields to check.
+- Localization is a smoke sample script that checks for the titles in login and registeration pages for Dansk, Español, it can easily be extended with more languages and more fields to check
+
 
 
 

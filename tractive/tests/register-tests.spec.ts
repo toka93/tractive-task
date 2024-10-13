@@ -4,16 +4,17 @@ import { loadTestData } from '../utils/helpers'
 import { test, expect, BASE_URL } from './fixture'
 import { SettingsPage } from '../pages/settingsPage';
 import { error } from 'console';
+import { ActivationPage } from '../pages/activationPage';
 
 
 
 let registerPage: RegisterationPage;
-let settingsPage: SettingsPage
+let settingsPage: SettingsPage;
+let activationPage : ActivationPage;
 
 
 
-
-test.describe('Data Driven Tests', () => {
+test.describe('Data Driven Registeration Tests', () => {
     const testData = loadTestData('RegisterData'); // Load the test data
 
     // Loop through the test data and run the test for each set of credentials
@@ -26,8 +27,9 @@ test.describe('Data Driven Tests', () => {
 
             if (data.case === 'Valid Register') {
                 await registerPage.clickOnCreateAccount();
-                settingsPage = new SettingsPage(page);
-                await settingsPage.validatePageTitle();
+                activationPage = new ActivationPage(page);
+                await activationPage.validateActivationPageTitle();
+                
 
             }
             else {
