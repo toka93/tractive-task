@@ -1,7 +1,7 @@
 import { log } from 'console';
 import { SettingsPage } from '../pages/settingsPage';
 import { loadTestData } from '../utils/helpers'
-import { test, expect, BASE_URL, Email, Password } from './fixture'
+import { test, API_URL } from './fixture'
 
 
 let settingsPage: SettingsPage
@@ -16,7 +16,8 @@ test.describe('Data Driven Localization Tests', () => {
     testData.forEach((data: { language: string; title: string }) => {
         test(`check Localization with ${data.language}`, async ({ loginPage, page }) => {
             //wait for request to change language
-            const responsePromise = page.waitForResponse('https://graph-stage.tractive.com/3/analytics/log');
+            const apiURL=`${API_URL}/analytics/log`;
+            const responsePromise = page.waitForResponse(apiURL);
             // Use the language and title from the JSON file
             await loginPage.chooseLanguage(data.language);
             const response = await responsePromise;

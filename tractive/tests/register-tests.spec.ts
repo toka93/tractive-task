@@ -1,9 +1,7 @@
-import { emit } from 'process';
 import { RegisterationPage } from '../pages/registerationPage';
 import { loadTestData } from '../utils/helpers'
 import { test, expect, BASE_URL } from './fixture'
 import { SettingsPage } from '../pages/settingsPage';
-import { error } from 'console';
 import { ActivationPage } from '../pages/activationPage';
 
 

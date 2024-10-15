@@ -1,7 +1,7 @@
 import { log } from 'console';
 import { SettingsPage } from '../pages/settingsPage';
 import { loadTestData } from '../utils/helpers'
-import { test, expect, BASE_URL,Email,Password } from './fixture'
+import { test, expect,Email,Password } from './fixture'
 
 
 let settingsPage: SettingsPage

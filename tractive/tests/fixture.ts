@@ -10,6 +10,7 @@ const Cookie_Value = process.env.Cookie_Value || '';
 const Domain = process.env.Domain || '';
 const Email = process.env.Email || '';
 const Password = process.env.Password|| '';
+const API_URL = process.env.API_URL|| '';
 
 // Declare the types of your fixtures.
 type MyFixtures = {
@@ -41,4 +42,4 @@ export const test = base.extend<MyFixtures>({
   },
 });
 
-export { expect, BASE_URL,Email, Password};
+export { expect, BASE_URL,Email, Password,API_URL};
